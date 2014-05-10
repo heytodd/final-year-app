@@ -1,0 +1,714 @@
+@import url('import.css');
+
+/*------------------------------------*\
+  COLORS - colour variables
+\*------------------------------------*/
+@black: #000000;
+
+@red: #e23f23;
+/*------------------------------------*\*/
+
+
+/*------------------------------------*\
+  Appgyver Styles
+\*------------------------------------*/
+* {
+  -webkit-user-select: none;  /* Disable selection/copy of elements when tapping for a long time */
+  -webkit-touch-callout: none; /* Disable touch callouts */
+}
+
+input, textarea, [contenteditable] * {
+  -webkit-user-select: auto;  /* Allow selection for input elements and those with contenteditable attribute */
+}
+/*------------------------------------*\
+
+
+
+/*------------------------------------*\
+  Global Styles
+\*------------------------------------*/
+.content-padded {
+  padding: 10px;
+}
+
+button {
+
+}
+
+body {
+	h2 {
+		font-size: 12pt;
+		line-height: 12pt;
+		margin: 0;
+		color: @black;
+		padding: 10px 0;
+		text-align: center;
+	}
+}
+
+.group-visibility {
+	content: '';
+	background-image:url('/images/profile-todd.png');
+	height: 25px;
+	width: 25px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background-size: 25px 25px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.icon {
+	display: none;
+	height: 40px;
+	width: 40px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	/*background-size: auto 90%;*/
+	border-radius: 50px;
+}
+
+
+.apple-search {
+	background-color: #d8d8db; // Create/add colour variable
+	padding: 6px;
+	// border-bottom: solid 1px #c8c8c8; // Create/add colour variable
+
+	input {
+		font-size: 14px;
+		height: 25px;
+		width: 96%;
+		text-align: center;
+	}
+}
+
+.status-update {
+  padding: 5px;
+  min-height: 25px;
+  border-left: 1px solid #dfdfdf; // Create/add colour variable
+  border-right: 1px solid #dfdfdf !important;
+  font-size: 14px;
+  border-radius: 0;
+	color: #dfdfdf;
+	float: left;
+}
+.paperclip-2 {
+float: left;
+}
+.status-update-container {
+	background-color: white;
+	height: 28px;
+}
+/*------------------------------------*\
+
+
+/*------------------------------------*\
+  Profile
+\*------------------------------------*/
+.profile-container {
+	position: relative;
+
+	h2 {
+		font-size: 18px;
+	}
+}
+
+.profile-image-john {
+	background-image:url('/images/john-square.jpg');
+	z-index: 3;
+	height: 52px;
+	width: 52px;
+	background-size: 52px 52px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 5px;
+}
+
+.profile-image-james {
+	background-image:url('/images/james-square.jpg');
+	z-index: 3;
+	height: 52px;
+	width: 52px;
+	background-size: 52px 52px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 5px;
+}
+
+
+.default-icon {
+	background-image:url('/images/profile-default.png');
+	height: 50px;
+	width: 50px;
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 5px;
+}
+
+.profile-list {
+	li h3 {
+		line-height: 30pt;
+	}
+}
+/*------------------------------------*\
+
+/*------------------------------------*\
+  Edit Profile
+\*------------------------------------*/
+
+fieldset, form, .form-row .form-text-row {
+	width: 100%;
+	background-color: white;
+	border-left: none;
+	border-right: none;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+  Contacts
+\*------------------------------------*/
+.contacts {
+	.contacts-list {
+		.contact-list > li {
+			border-bottom: solid 1px #c8c8c8; // Create/add colour variable
+		}
+
+		li.comp > div {
+			border-bottom: none;
+		}
+
+		li.comp > aside:last-child {
+		  border-bottom: none;
+		}
+
+		.contact-list > li h3 {
+		  line-height: 14pt;
+		}
+	}
+}
+/*------------------------------------*\
+
+
+/*------------------------------------*\
+  Chats - Firebase
+\*------------------------------------*/
+.chat-firebase {
+	height: 390px;
+	position: fixed;
+	// position: relative;
+	#toggle-panels {
+		position: relative;
+	}
+
+	.touch {
+	  -webkit-overflow-scrolling: touch;
+	  height: 390px;
+	  position: relative;
+
+	}
+
+	#myImage {
+	  width: 300px;
+	  margin: auto;
+	  display: block;
+	}
+
+	.messages {
+		padding: 0 10px;
+		overflow-y: scroll; /* has to be scroll, not auto */
+		-webkit-overflow-scrolling: touch;
+		height: 340px;
+	}
+	
+	.load-earlier{
+		text-align: center;
+		margin: auto 0;
+	}
+	.chat-name {
+	  color: black;
+	  display: none;
+	}
+
+	.chat-text {
+		background: #8ed2bd;
+		color: #ffffff;
+		padding: 5px;
+		margin: 5px 0;
+		width: 75%;
+		border: 1px solid #dfdfdf; // Create/add colour variable
+	}
+
+	input {
+	  position: absolute;
+	  width: 65%;
+	  padding: 5px;
+	  min-height: 25px;
+	  border-left: 1px solid #dfdfdf; // Create/add colour variable
+	  border-right: 1px solid #dfdfdf;
+	  font-size: 14px;
+	  border-radius: 0;
+	  bottom: 8px;
+	  color: #dfdfdf;
+	}
+	.input-message-container {
+		width: 100%;
+		position: absolute;
+		bottom: -49px;
+		border-top: 1px solid #dfdfdf;
+		background-color: white;
+	}
+	.user-message {
+	  left: 15%;
+	}
+	.send-message {
+		position: absolute;
+		width: 15%;
+		right: 0;
+		vertical-align: middle;
+	}
+	.microphone {
+		position: absolute;
+		right: 0;
+	}
+}
+/*------------------------------------*/
+
+
+
+
+
+
+/* ==============================
+   Segmented Control
+   ============================== */
+.test-segmented {
+	margin-top: -50px;
+
+	.segmented {
+	  display: -webkit-inline-box;
+	  -webkit-box-orient: horizontal;
+	  display: -webkit-inline-flex;
+	  -webkit-flex-direction: row;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+	.segmented > .button {
+	color: grey;
+	opacity: 0.8;
+	margin: 0 10px;
+	  border: solid 0px #007aff;
+	  padding: 5px 24px;
+	  border-left: none;
+	  background-color: transparent;
+	  width: auto;
+	  overflow-x: hidden;
+	  -webkit-transition: none;
+	  transition: none;
+	  font-size: 10pt;
+	  /* old flex box */
+
+	  display: -webkit-box;
+	  -webkit-box-orient: vertical;
+	  -webkit-box-pack: center;
+	  -webkit-box-align: center;
+	  /* new flex box */
+
+	  display: -webkit-flex;
+	  -webkit-flex-direction: column;
+	  -webkit-justify-content: center;
+	  -webkit-align-items: center;
+	  -webkit-box-flex: 1 !important;
+	  -webkit-flex: 1 !important;
+	  text-align: center;
+	}
+
+	.segmented > .button:hover,
+	.segmented > .button.selected {
+	  color: #ffffff;
+	  background-color: transparent;
+	  opacity: 1 !important;
+	}
+
+	div.horizontal.centered > .segmented {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  margin: 10px 20px;
+	  -webkit-flex: 1;
+	}
+	.segmented.align-flush {
+	  position: absolute;
+	  right: 12px;
+	  top: 6px;
+	}
+}
+
+
+
+
+
+
+/* ==============================
+   Lists
+   ============================== */
+.contact-list {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+  border-top: solid 1px #c8c8c8;
+  border-bottom: solid 1px #c8c8c8;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 100%;
+  aside {
+  	width: 20%;
+  	display: inline-block;
+  }
+}
+.contact-list > li {
+  padding: 23px 15px 23px 15px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  position: relative;
+  background-color: #ffffff;
+  font-size: 12pt;
+}
+.contact-list > li::before {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  right: 0px;
+  border-bottom: solid 1px #c8c8c8;
+}
+.contact-list > li:last-of-type::before {
+  border-bottom: none;
+}
+.contact-list > li.nav::after {
+  display: block;
+  content: '';
+  height: 6px;
+  width: 6px;
+  border-right: solid 2px #c7c7cc;
+  border-top: solid 2px #c7c7cc;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  float: right;
+  position: absolute;
+  top: 26px;
+  right: 15px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+@list BkColor;
+.contact-list > li.show-detail::after {
+  display: block;
+  content: 'i';
+  height: 20px;
+  width: 22px;
+  border-radius: 20px;
+  border: solid 1px #007aff;
+  color: #007aff;
+  font: bold 14px/0 'Times', serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+/* List Footer */
+.contact-list + p,
+.contact-list + p + p {
+  color: #7f7f7f;
+  font-family: HelveticaNeue, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.contact-list ~ p {
+  margin: 0 15px;
+}
+.contact-list ~ p + p {
+  margin-top: 5pt;
+}
+.contact-list > li[data-goto] {
+  cursor: pointer;
+}
+.contact-list > li[data-goto]:hover,
+.contact-list > li[data-goto].touched,
+li[data-show-article]:hover,
+li[data-show-article].touched,
+.contact-list.select > li:hover,
+.contact-list.select > li.touched,
+.contact-list.select > li.selected {
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+/* ==============================
+   List title & subtitle
+   ============================== */
+.contact-list > li > h3,
+.contact-list > li > h4 {
+
+  font-weight: 200;
+  margin: 0;
+}
+.contact-list li {
+	.hannah-circle {
+		content: '';
+		background-image:url('/images/hannah.png');
+		height: 52px;
+		width: 52px;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		background-size: 52px 52px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.harry-circle {
+		content: '';
+		background-image:url('/images/harry.png');
+		height: 52px;
+		width: 52px;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		background-size: 52px 52px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	.max-circle {
+		content: '';
+		background-image:url('/images/max@2x.png');
+		height: 52px;
+		width: 52px;
+		position: absolute;
+		left: 10px;
+		top: 10px;
+		background-size: 52px 52px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+}
+.contact-list > li h3 {
+margin-left: 52px;
+  line-height: 18pt;
+}
+.contact-list > li h4 {
+  line-height: 14pt;
+  color: #7f7f7f;
+}
+.contact-list > li > h4,
+.contact-list > li > div > h4 {
+  font-size: 11pt;
+  margin: 0;
+}
+.contact-list > li > aside > h4 {
+  margin: 0;
+  font-weight: normal;
+  color: #7f7f7f;
+}
+
+
+
+
+/* ==============================
+   Actionsheet
+   ============================== */
+.action-sheet {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* This is just in case you're leaving the markup in the DOM while the sheet
+     isn't activated. I recommend removing the markup instead. */
+  pointer-events: none;
+}
+
+.action-sheet-content a {
+  color: #2087fc !important;
+}
+
+.action-sheet-content a.delete_friend_button {
+	color: red !important;
+}
+
+.action-sheet,
+.action-sheet > .action-sheet-content {
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+}
+
+.action-sheet.in {
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: auto; 
+}
+
+.action-sheet.in > .action-sheet-content {
+  bottom: 0; 
+}
+
+.action-sheet-content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  max-height: 80%;
+  padding: 0px 15px 12px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0px auto;
+  margin-bottom: 7px;
+  width: 87%;
+  -webkit-overflow-scrolling: touch;
+  /* background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(231, 240, 245, 0.95)); */
+  // background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(231, 240, 245, 0.95));
+  // background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.95), rgba(231, 240, 245, 0.95));
+  /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(231, 240, 245, 0.95)); */
+  // background-color: rgba(0 0 0 0);
+}
+
+.action-sheet-content > h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 500; 
+}
+
+.action-sheet-content > p {
+  font-size: 14px; 
+}
+
+.action-sheet-button {
+	// color: #426eff;
+	display: block;
+	margin: 0 -15px;
+	line-height: 45px;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 7px;
+  background-color: rgba(255, 255, 255, 0.95);
+	// border-radius: 5px;
+	// background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(231, 240, 245, 0.95));
+}
+
+.action-sheet-button:last-child {
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+
+.action-sheet-button:first-child {
+	border-top-right-radius: 4px !important;
+	border-top-left-radius: 4px !important;
+	border-bottom: 1px solid lightgrey;
+}
+
+.action-sheet-button:nth-last-child(2) {
+	border-bottom-right-radius: 4px !important;
+	border-bottom-left-radius: 4px !important;
+	border-top: 1px solid lightgrey;
+}
+
+.action-sheet-button-blue {
+  color: white;
+  background: #2087fc;
+}
+
+.action-sheet-icons {
+  height: 87px;
+  margin: 15px -15px 0;
+  padding: 15px 15px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #aab1b5;
+  -webkit-overflow-scrolling: touch;
+}
+
+.action-sheet-icon {
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  white-space: normal;
+}
+  
+.action-sheet-icon + .action-sheet-icon {
+  margin-left: 15px;
+}
+
+.action-sheet-icon-link {
+  position: relative;
+  display: block;
+  padding-top: 65px;
+  line-height: 1;
+  font-size: 11px;
+  color: black;
+  text-align: center;
+}
+
+.action-sheet-icon-link:before,
+.action-sheet-icon-link:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.action-sheet-icon-link:before {
+  line-height: 60px;
+  font-size: 32px;
+  color: #8e969b; 
+}
+
+.action-sheet-icon-link:after {
+  content: '';
+  height: 58px;
+  border: 1px solid #aab1b5;
+  border-radius: 10px; 
+}
+
+/* Friend actionsheet styles*/
+
+.friend .action-sheet-content {
+	border-radius: 5px;
+}
+
+.friend .action-sheet-button {
+  display: block;
+  margin: 0 -15px;
+  line-height: 45px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.95);
+ 
+}
+
+.friend .action-sheet-button:last-child {
+	margin-bottom: -12px;
+	margin-top: 8px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+
+// .friend .action-sheet-button:nth-child(1) {
+// 	border-top-left-radius: 5px;
+// 	border-top-right-radius: 5px;
+// }
+
+.friend .action-sheet-button:nth-child(2) {
+
+  // border-bottom-left-radius: 5px;
+  // border-bottom-right-radius: 5px;
+}
+
