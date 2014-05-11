@@ -6,6 +6,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 var addButton = new steroids.buttons.NavigationBarButton();
     addButton.imagePath = "/icons/add@2x.png";
 
+var editButton = new steroids.buttons.NavigationBarButton();
+    editButton.title = "Edit";
+
 // preload view vars
 var friendView = new steroids.views.WebView("views/friend/index.html");
     friendView.preload();
@@ -25,19 +28,19 @@ function onDeviceReady () {
 //  initVisibilityChange();
 } 
 
-function initVisibilityChange() {
+// function initVisibilityChange() {
     
-   document.addEventListener("visibilitychange", onVisibilityChange, false);
-}
+//    document.addEventListener("visibilitychange", onVisibilityChange, false);
+// }
 
-function onVisibilityChange() {
+// function onVisibilityChange() {
     
-    if(!document.hidden) {
-        // if document is visible... do this:
+//     if(!document.hidden) {
+//         // if document is visible... do this:
         
-        steroids.view.navigationBar.show();
-    }
-}
+//         steroids.view.navigationBar.show();
+//     }
+// }
 
 function navigationBar() {
   steroids.view.navigationBar.show();
@@ -45,13 +48,13 @@ function navigationBar() {
     title: "Contacts",
     overrideBackButton: true,
     buttons: {
-      right: [addButton]
+      left: [addButton],
+      right: [editButton]
     }
   });
 }
 
 function disableScrolling() {
-  // http://www.sitepoint.com/forums/showthread.php?673175-iphone-gt-safari-gt-Lock-viewport-scrolling
   $('body').bind("touchmove", {}, function(event){
       event.preventDefault();
   });
@@ -62,35 +65,16 @@ function buttonClasses() {
   $('.group_btn').on('singletap', showGroup);
 }
 
-// Seg Function
-function segmentedList () {
+// addButton.onTap = function() {
+//   steroids.layers.push( {
+//     view: addView,
+//     navigationBar: false,
+//     tabBar: false
+//   });
+// }
 
-  // chocloate-chip UI - segmented list
-  var segmentedOptions = {
-    id: 'mySegmented',
-    labels : ['Individual','Groups'],
-    selected: 0
-  };
-
-  var segmentedComponent = $.UICreateSegmented(segmentedOptions);
-
-  $('#segmentedPanel').append(segmentedComponent);
-  $('.segmented').UISegmented({callback:onSegmentSelected});
-  $('.segmented').UIPanelToggle('#toggle-panels',function(){$.noop;});     
-}
-
-function onSegmentSelected(e) {
-  // stop any events/weird stuff happening
-  event.stopPropagation();
-
-  //call onTabClicked, we'll decide what to do from there
-  onTabClicked($('.segmented').find('.selected').index());
-}
-
-
-addButton.onTap = function() {
+editButton.onTap = function() {
   steroids.layers.push( {
-    view: addView,
     navigationBar: false,
     tabBar: false
   });

@@ -3,7 +3,7 @@
 <script>
 // http://stackoverflow.com/questions/19250043/how-to-add-input-value
 function appendInput() {
-    $('.feed-update').append('<div> <ul class="list"> <li class="comp"> <aside> <span class="profile-image-john"></span> </aside> <div> <h3>John Smith</h3> <h4>February 10th</h4> <p>' + $('.input-value').val() + '</div> </p> </li> </ul> </div>');
+    $('.feed-update').append('<div> <ul class="list"> <li class="comp"> <aside> <span class="profile-image-john"></span> </aside> <div> <h3>John Smith</h3> <h4>May 14th</h4> <p>' + $('.input-value').val() + '</div> </p> </li> </ul> </div>');
 }
 
 $(function() {
@@ -46,19 +46,18 @@ var selectedPanel = $('.segmented').find('.selected').index();
         <section>
       <div id='segmentedPanel' class='horizontal centered test-segmented'></div>
         <div id="toggle-panels">
-          <div>
+          <div class="update-list">
           <div class="status-update-container">
-            <img src="/icons/paperclip@2x.png" style="height:20px;padding:13px;" class="paperclip-2">
+            <img src="/icons/paperclip@2x.png" style="height:18px;padding: 12px 15px;" class="paperclip-2">
             <input type="text" value="" class="input-value status-update" placeholder='What is on your mind?'/>
-            <button type="button" id="push" onclick="appendInput()";>Post</button>
+            <button type="button" id="push" class="post-button" onclick="appendInput()";>Post</button>
           </div>
-          <br>
 
+          
+          <div class="width">
           <div class="feed-update">
             
           </div>
-          
-          <br>
             <ul class='list'>
               <li class='comp'>
                 <aside>
@@ -69,6 +68,7 @@ var selectedPanel = $('.segmented').find('.selected').index();
                   <h4>February 10th</h4>
                   <p>This app idea is pretty neat.</p>
                 </div>
+
               </li>
             </ul>
             <ul class='list'>
@@ -95,6 +95,7 @@ var selectedPanel = $('.segmented').find('.selected').index();
                 </div>
               </li>
             </ul>
+          </div>
           </div>
           
 
@@ -153,55 +154,26 @@ var selectedPanel = $('.segmented').find('.selected').index();
           </ul>
           </div>
           <div>
-            <ul class='list'>
-              <li class='comp' ontouchend="openGroup()">
-                <aside>
-                  <span class="default-icon"></span>
-                </aside>
-                <div>
-                  <h3>Football Sundays</h3>
-                  <h4>February 10th</h4>
-                  <p>Oganising football kickabouts</p>
-                </div>
-                <span class="group-visibility"></span>
-              </li>
-            </ul>
-            <ul class='list'>
-              <li class='comp'>
-                <aside>
-                  <span class="default-icon"></span>
-                </aside>
-                <div>
-                  <h3>Maths module</h3>
-                  <h4>February 3rd</h4>
-                  <p>Maths class group chat</p>
-                </div>
-              </li>
-            </ul>   
-            <ul class='list'>
-              <li class='comp'>
-                <aside>
-                  <span class="default-icon"></span>
-                </aside>
-                <div>
-                  <h3>Maths module</h3>
-                  <h4>February 3rd</h4>
-                  <p>Maths class group chat</p>
-                </div>
-              </li>
-            </ul>   
-            <ul class='list'>
-              <li class='comp'>
-                <aside>
-                  <span class="default-icon"></span>
-                </aside>
-                <div>
-                  <h3>Maths module</h3>
-                  <h4>February 3rd</h4>
-                  <p>Maths class group chat</p>
-                </div>
-              </li>
-            </ul>   
+            <div class="contacts">
+              <h2>A</h2>
+              <ul class='list contact-list'>
+                <li class='nav'>
+                 <span class="harry-circle"></span><h3>Harry Adams</h3>
+                </li>
+                <li class='nav'>
+                  <span class="max-circle"></span><h3>Max Andrews</h3>
+                </li>
+              </ul>
+              <h2>R</h2>
+              <ul class='list contact-list'>
+                <li class='nav conversation-button'>
+                  <span class="hannah-circle"></span><h3>Hannah Richards</h3>
+                </li>
+                <li class='nav conversation-button'>
+                  <span class="hannah-circle"></span><h3>Hannah Richards</h3>
+                </li>
+              </ul>
+            </div>  
           </div>
         </div>
         <!-- <ul class='list' id='output'>

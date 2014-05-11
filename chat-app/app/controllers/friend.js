@@ -7,14 +7,13 @@ var someView = new steroids.views.WebView("");
 
 // Info and Back buttons
 var infoButton = new steroids.buttons.NavigationBarButton();
-    infoButton.imagePath = "/icons/pill@2x.png";
+    infoButton.imagePath = "/icons/convo-contact@2x.png";
 
 var backButton = new steroids.buttons.NavigationBarButton();
-    backButton.imagePath = "/icons/back_btn@2x.png";
+    backButton.imagePath = "/icons/back-icon@2x.png";
 
 function onDeviceReady() {
   navigationBar();
-  // disableScrolling();
   uiSheetButtons();
   uiPopupButtons();
 } 

@@ -14,7 +14,7 @@ function onDeviceReady() {
   // initSheetButtons();
   navigationBar();
   // buttonClasses();
-  // disableScrolling();
+  disableScrolling();
   // enableScrolling();
   // initChuiSheet();
   // initGesture();
@@ -47,13 +47,12 @@ function closeLogoutControls() {
     $('.action-sheet').removeClass('in');
 }*/
 
-/*function disableScrolling() {
-    
-  // http://www.sitepoint.com/forums/showthread.php?673175-iphone-gt-safari-gt-Lock-viewport-scrolling
+// Credit - http://www.sitepoint.com/forums/showthread.php?673175-iphone-gt-safari-gt-Lock-viewport-scrolling
+function disableScrolling() {
   $('body').bind("touchmove", {}, function(event){
       event.preventDefault();
   });
-}*/
+}
 /*
 function enableScrolling() {
   // http://www.sitepoint.com/forums/showthread.php?673175-iphone-gt-safari-gt-Lock-viewport-scrolling
